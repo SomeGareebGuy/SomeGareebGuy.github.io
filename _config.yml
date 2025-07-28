@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Anubhav Dash"
-  avatar : "/assets/images/Image.jpeg"
+  avatar : "/assets/images/image.jpeg"
   bio    : "Mathematics Undergraduate in NIT Rourkela. Interested in mathematics, cryptography, Vim, Unix, design."
   links:
     - label: "Email"
