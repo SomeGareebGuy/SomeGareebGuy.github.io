@@ -63,15 +63,6 @@ author:
     -  label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:anubhav.dash14@gmail.com"
-    #-  label: "Website"
-      # icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    #-  label: "Twitter"
-      # icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    #-  label: "Facebook"
-      # icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     -  label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/SomeGareebGuy"
@@ -81,6 +72,16 @@ author:
     - label: "LinkedIn"
       icon: "fa-brands fa-linkedin"
       url : "https://www.linkedin.com/in/anubhav-dash-b278a7291/"
+    #-  label: "Website"
+      # icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    #-  label: "Twitter"
+      # icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    #-  label: "Facebook"
+      # icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    
 
 
 footer:
