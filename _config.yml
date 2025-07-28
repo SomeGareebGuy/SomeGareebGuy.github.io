@@ -13,15 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: Anubhav Dash
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Mathematics Undergraduate in NIT Rourkela. Interested in mathematics, Cryptography, Vim, Unix, design.
 twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+github_username: SomeGareebGuy
+minimal_mistakes_skin: neon
 search: true
 
 # Build settings
@@ -58,22 +56,32 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Anubhav Dash"
+  avatar : "/assets/images/Image.jpeg"
+  bio    : "Mathematics Undergraduate in NIT Rourkela. Interested in mathematics, cryptography, Vim, Unix, design."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
+    -  label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:anubhav.dash14@gmail.com"
+    #-  label: "Website"
+      # icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    #-  label: "Twitter"
+      # icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    #-  label: "Facebook"
+      # icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    -  label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
+      url: "https://github.com/SomeGareebGuy"
+    -  label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://www.instagram.com/bina_anubhav_ke/"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url : "https://www.linkedin.com/in/anubhav-dash-b278a7291/"
+
 
 footer:
   links:
