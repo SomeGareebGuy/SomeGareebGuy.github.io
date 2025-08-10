@@ -1,6 +1,6 @@
 ---
 title: Trying Something
-date: 2025-08-0610:46:30-04:00
+date: 2025-08-06T10:46:30-04:00
 categories:
   - blog
 tags:
