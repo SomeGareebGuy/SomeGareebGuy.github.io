@@ -95,4 +95,4 @@ On some last notes: I started writing this on 10th of August last year and that 
 
 I am writing it this late since I didn't get much free time plus one of the last presentations I gave 2 days ago and it still went pretty bad ngl. I am surprised for how long I have studied and got something new out of this paper so far. Also I didn't want to type out so much of the same stuff again and again, but I think this typing plus screenshot style works for me.
 
-Fin.
+Fin
