@@ -1,0 +1,747 @@
+
+/* ================================================
+   MATHEMATICAL ARCHIVE
+   Anubhav Dash
+   Editorial / Academic Design
+================================================ */
+
+
+/* --------------------------------
+   01. VARIABLES
+-------------------------------- */
+
+:root {
+    --paper: #f8f7f3;
+    --paper-dark: #efeee8;
+    --ink: #262722;
+    --ink-light: #55564f;
+    --muted: #85857c;
+    --line: #deddd5;
+    --accent: #8b4939;
+
+    --serif: 'Libre Baskerville', Georgia, serif;
+    --sans: 'DM Sans', Arial, sans-serif;
+    --mono: 'DM Mono', monospace;
+
+    --page-width: 1120px;
+    --header-height: 76px;
+
+    --transition: 0.25s ease;
+}
+
+
+/* --------------------------------
+   02. RESET
+-------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: #e6d6cb;
+    color: var(--ink);
+}
+
+
+/* --------------------------------
+   03. HEADER
+-------------------------------- */
+
+.site-header {
+    width: 100%;
+    height: var(--header-height);
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+}
+
+.header-inner {
+    max-width: var(--page-width);
+    height: 100%;
+    margin: auto;
+    padding: 0 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo-mark {
+    font-family: var(--serif);
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.logo-description {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-link {
+    font-size: 12px;
+    color: var(--ink-light);
+    transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+/* --------------------------------
+   04. GENERAL LAYOUT
+-------------------------------- */
+
+.page-container {
+    max-width: var(--page-width);
+    margin: auto;
+    padding: 0 36px;
+}
+
+section {
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* --------------------------------
+   05. HERO SECTION
+-------------------------------- */
+
+.hero-section {
+    padding: 112px 0 105px;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+}
+
+.meta-divider {
+    width: 24px;
+    height: 1px;
+    background: var(--line);
+}
+
+.hero-title {
+    margin-top: 35px;
+
+    font-family: var(--serif);
+    font-size: clamp(42px, 6.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.23;
+    letter-spacing: -3.5px;
+}
+
+.title-period {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 500px;
+    margin-top: 30px;
+
+    color: var(--ink-light);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.hero-description p + p {
+    margin-top: 8px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 30px;
+    padding-bottom: 4px;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition);
+}
+
+.text-link:hover {
+    border-color: var(--accent);
+}
+
+.link-arrow {
+    transition: transform var(--transition);
+}
+
+.text-link:hover .link-arrow {
+    transform: translateX(4px);
+}
+
+
+/* --------------------------------
+   06. SECTION LABELS
+-------------------------------- */
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: var(--muted);
+}
+
+.section-number {
+    color: var(--accent);
+}
+
+
+/* --------------------------------
+   07. ABOUT SECTION
+-------------------------------- */
+
+.about-section {
+    padding: 72px 0 80px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    margin-top: 43px;
+}
+
+.about-content h2 {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: -1px;
+}
+
+.about-text {
+    color: var(--ink-light);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.about-text p + p {
+    margin-top: 17px;
+}
+
+
+/* --------------------------------
+   08. FEATURED PRESENTATIONS
+-------------------------------- */
+
+.featured-section {
+    padding: 72px 0 85px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-heading .text-link {
+    margin-top: 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    margin-top: 43px;
+}
+
+.presentation-card {
+    display: block;
+    border: 1px solid var(--line);
+    background: #fbfaf7;
+
+    transition:
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.presentation-card:hover {
+    border-color: #aaa69b;
+    transform: translateY(-3px);
+}
+
+.card-image {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--paper-dark);
+    border-bottom: 1px solid var(--line);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.presentation-card:hover .card-image img {
+    transform: scale(1.025);
+}
+
+.card-content {
+    padding: 23px 24px 25px;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.7px;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.card-title {
+    margin-top: 13px;
+
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.card-description {
+    margin-top: 10px;
+
+    color: var(--ink-light);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.loading-message {
+    grid-column: 1 / -1;
+    padding: 30px 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* --------------------------------
+   09. SUBJECTS
+-------------------------------- */
+
+.subjects-section {
+    padding: 72px 0 85px;
+}
+
+.subjects-heading {
+    margin-top: 35px;
+
+    font-family: var(--serif);
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+}
+
+.subjects-list {
+    margin-top: 35px;
+    border-top: 1px solid var(--line);
+}
+
+.subject-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 30px;
+    align-items: center;
+    gap: 25px;
+
+    padding: 21px 5px;
+    border-bottom: 1px solid var(--line);
+
+    transition: padding var(--transition);
+}
+
+.subject-item:hover {
+    padding-left: 12px;
+}
+
+.subject-name {
+    font-family: var(--serif);
+    font-size: 17px;
+}
+
+.subject-description {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.subject-arrow {
+    text-align: right;
+    font-size: 17px;
+    color: var(--accent);
+
+    transition: transform var(--transition);
+}
+
+.subject-item:hover .subject-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* --------------------------------
+   10. RECENT PRESENTATIONS
+-------------------------------- */
+
+.recent-section {
+    padding: 72px 0 85px;
+}
+
+.recent-list {
+    margin-top: 35px;
+}
+
+.recent-item {
+    display: grid;
+    grid-template-columns: 110px 1fr 30px;
+    align-items: center;
+    gap: 30px;
+
+    padding: 21px 5px;
+    border-bottom: 1px solid var(--line);
+
+    transition: padding var(--transition);
+}
+
+.recent-item:hover {
+    padding-left: 12px;
+}
+
+.recent-date {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.recent-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.recent-subject {
+    display: block;
+    margin-top: 4px;
+
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.recent-arrow {
+    text-align: right;
+    color: var(--accent);
+    transition: transform var(--transition);
+}
+
+.recent-item:hover .recent-arrow {
+    transform: translateX(4px);
+}
+
+
+/* --------------------------------
+   11. CLOSING SECTION
+-------------------------------- */
+
+.closing-section {
+    padding: 90px 0;
+    text-align: center;
+    border-bottom: none;
+}
+
+.closing-quote {
+    max-width: 650px;
+    margin: auto;
+
+    font-family: var(--serif);
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--ink-light);
+}
+
+.closing-attribution {
+    display: block;
+    margin-top: 20px;
+
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+}
+
+
+/* --------------------------------
+   12. FOOTER
+-------------------------------- */
+
+.site-footer {
+    border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+    max-width: var(--page-width);
+    min-height: 105px;
+    margin: auto;
+    padding: 25px 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.footer-description {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    font-size: 10px;
+    color: var(--ink-light);
+}
+
+.footer-right a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    color: var(--muted);
+}
+
+
+/* --------------------------------
+   13. MOBILE NAVIGATION
+-------------------------------- */
+
+.menu-toggle {
+    width: 30px;
+    height: 30px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 20px;
+    height: 1px;
+    background: var(--ink);
+}
+
+
+/* --------------------------------
+   14. RESPONSIVE DESIGN
+-------------------------------- */
+
+@media (max-width: 768px) {
+
+    .header-inner {
+        padding: 0 22px;
+    }
+
+    .logo-description {
+        font-size: 8px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        z-index: 10;
+
+        padding: 22px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .page-container {
+        padding: 0 22px;
+    }
+
+    .hero-section {
+        padding: 85px 0 75px;
+    }
+
+    .hero-title {
+        letter-spacing: -2px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-item {
+        grid-template-columns: 1fr 25px;
+        gap: 5px;
+    }
+
+    .subject-description {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .subject-arrow {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .recent-item {
+        grid-template-columns: 75px 1fr 20px;
+        gap: 12px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .section-heading .text-link {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .footer-inner {
+        padding: 25px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .hero-meta {
+        font-size: 8px;
+        gap: 8px;
+    }
+
+    .hero-title {
+        font-size: 43px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+    }
+
+    .closing-quote {
+        font-size: 18px;
+    }
+
+}
