@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="A mathematical presentation from the archive.">
+
+  <title>Presentation | Mathematical Archive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* Presentation viewer */
+
+    .viewer-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .viewer-header {
+      padding: 24px 7%;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .viewer-back {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .viewer-back:hover {
+      color: var(--accent);
+    }
+
+    .viewer-brand {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .viewer-main {
+      width: min(1200px, 86%);
+      margin: 0 auto;
+      padding: 65px 0 80px;
+      flex: 1;
+    }
+
+    .viewer-meta {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .viewer-title {
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.25;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      max-width: 850px;
+      margin: 0 0 20px;
+    }
+
+    .viewer-description {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 30px;
+    }
+
+    .viewer-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+
+    .viewer-button {
+      display: inline-block;
+      padding: 11px 17px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      transition: 0.2s ease;
+    }
+
+    .viewer-button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .viewer-button-primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .viewer-button-primary:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .pdf-container {
+      width: 100%;
+      min-height: 650px;
+      height: 80vh;
+      background: #e9e7e1;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: white;
+    }
+
+    .viewer-message {
+      padding: 80px 20px;
+      text-align: center;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.3);
+    }
+
+    .viewer-message h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    .viewer-message p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .viewer-footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      .viewer-header {
+        padding: 20px 6%;
+      }
+
+      .viewer-main {
+        width: 90%;
+        padding: 45px 0 55px;
+      }
+
+      .pdf-container {
+        height: 65vh;
+        min-height: 450px;
+      }
+
+      .viewer-footer {
+        padding: 22px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="viewer-page">
+
+    <header class="viewer-header">
+      <a href="./index.html" class="viewer-back">
+        ← Back to library
+      </a>
+
+      <a href="../index.html" class="viewer-brand">
+        AD. Mathematical Archive
+      </a>
+    </header>
+
+    <main class="viewer-main">
+
+      <div id="viewer-content">
+
+        <div class="viewer-message">
+          <h2>Loading presentation...</h2>
+          <p>Please wait while the archive retrieves the presentation.</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="viewer-footer">
+      <span>AD. Mathematical Archive</span>
+      <span>Notes, ideas &amp; explorations</span>
+    </footer>
+
+  </div>
+
+  <script src="./presentations.js"></script>
+  <script src="./view.js"></script>
+
+</body>
+</html>
